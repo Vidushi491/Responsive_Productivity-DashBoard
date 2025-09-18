@@ -1,0 +1,188 @@
+/* ====== BASE STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+#main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navbar */
+nav {
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.nav-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.header1, .header2 {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Features Grid */
+.allFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.elem {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  flex: 1 1 200px;
+  max-width: 220px;
+  transition: transform 0.2s;
+}
+
+.elem img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.elem:hover {
+  transform: scale(1.05);
+}
+
+/* Full pages */
+.fullElem {
+  display: none; /* default hidden */
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* ya var(--pri) agar theme hai */
+  z-index: 999; /* sabse upar */
+  overflow-y: auto;
+}
+
+/* jab active ho to show */
+.fullElem.active {
+  display: block;
+}
+
+.fullElem.active {
+  display: block;
+}
+
+/* Back button */
+button.back {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  #main {
+    padding: 15px;
+  }
+
+  .nav-in {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .header1, .header2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .allFeatures {
+    justify-content: center;
+  }
+
+  .elem {
+    max-width: 45%;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #main {
+    padding: 10px;
+  }
+
+  nav h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  .elem {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  .fullElem {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button, input, textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .theme {
+    font-size: 16px;
+  }
+}
