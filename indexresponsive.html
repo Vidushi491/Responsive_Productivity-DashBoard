@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productivity Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="responsive.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-  <div id="main">
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-in">
-        <h2>Productivity DashBoard</h2>
-        <div class="theme">
-          <i class="ri-sun-line"></i>
+    <nav id="navbar">
+        <div class="nav-in">
+            <h2>Productivity DashBoard</h2>
+            <div class="theme">
+                <i class="ri-sun-line"></i>
+            </div>
         </div>
-      </div>
     </nav>
 
-    <!-- Header + Features -->
-    <section class="allElems">
-      <header>
-        <div class="header1">
-          <h2>20 April 2025</h2>
-          <h1>Thursday, 3:00 pm</h1>
-          <h4>Indore (MP)</h4>
-        </div>
-        <div class="header2">
-          <h2>20°C</h2>
-          <h4>Light rain</h4>
-          <h3 class="Precipitation">Precipitation: 35%</h3>
-          <h3 class="Humidity">Humidity: 49%</h3>
-          <h3 class="Wind">Wind: 10km/h</h3>
-        </div>
-      </header>
-
-      <div class="allFeatures">
-        <div class="elem" id="0">
-          <img src="https://i.pinimg.com/originals/12/a5/f7/12a5f724e5e306f715c9fae7351f99f6.gif" alt="" />
-          <h2>To-Do List</h2>
-        </div>
-        <div class="elem" id="1">
-          <img src="https://i.pinimg.com/originals/c8/1b/0d/c81b0d53713da4f48d54592cfc4886a8.gif" alt="" />
-          <h2>Daily Planner</h2>
-        </div>
-        <div class="elem" id="2">
-          <img src="https://i.pinimg.com/originals/38/eb/78/38eb78a86eddb8dd7074000907b08d09.gif" alt="" />
-          <h2>Motivation Quotes</h2>
-        </div>
-        <div class="elem" id="3">
-          <img src="https://i.pinimg.com/736x/c3/df/32/c3df3287fcd39fcef4bda95d34a8c300.jpg" alt="" />
-          <h2>Pomodoro Timer</h2>
-        </div>
-        <div class="elem" id="4">
-          <img src="https://i.pinimg.com/originals/52/e9/75/52e97506aec1975ed4da766541bdcefa.gif" alt="" />
-          <h2>Daily Goals</h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- Full pages -->
-    <section class="fullElem todo-list-fullpage">
-      <button class="back" id="0"><i class="ri-close-line"></i></button>
-      <h2>Your Personalised To-Do List</h2>
-      <div class="todo-container">
-        <div class="addTask">
-          <form>
-            <input id="task-input" type="text" placeholder="Enter Task" />
-            <textarea placeholder="Enter Details"></textarea>
-            <div class="mark-imp">
-              <input type="checkbox" id="check" />
-              <label for="check">Mark As Important!</label>
+    <div id="main">
+        <section class="allElems">
+            <header>
+                <div class="header1">
+                    <h2>20 April 2025</h2>
+                    <h1>Thursday, 3:00 pm</h1>
+                    <h4>Indore (MP)</h4>
+                </div>
+                <div class="header2">
+                    <h2>20°C</h2>
+                    <h4>Light rain</h4>
+                    <h3 class="Precipitation">Precipitation: 35%</h3>
+                    <h3 class="Humidity">Humidity: 49%</h3>
+                    <h3 class="Wind">Wind: 10km/h</h3>
+                </div>
+            </header>
+            <div class="allFeatures">
+                <div class="elem" id="0">
+                    <img src="https://i.pinimg.com/originals/12/a5/f7/12a5f724e5e306f715c9fae7351f99f6.gif" alt="" />
+                    <h2>To-Do List</h2>
+                </div>
+                <div class="elem" id="1">
+                    <img src="https://i.pinimg.com/originals/c8/1b/0d/c81b0d53713da4f48d54592cfc4886a8.gif" alt="" />
+                    <h2>Daily Planner</h2>
+                </div>
+                <div class="elem" id="2">
+                    <img src="https://i.pinimg.com/originals/38/eb/78/38eb78a86eddb8dd7074000907b08d09.gif" alt="" />
+                    <h2>Motivation Quotes</h2>
+                </div>
+                <div class="elem" id="3">
+                    <img src="https://i.pinimg.com/736x/c3/df/32/c3df3287fcd39fcef4bda95d34a8c300.jpg" alt="" />
+                    <h2>Pomodoro Timer</h2>
+                </div>
+                <div class="elem" id="4">
+                    <img src="https://i.pinimg.com/originals/52/e9/75/52e97506aec1975ed4da766541bdcefa.gif" alt="" />
+                    <h2>Daily Goals</h2>
+                </div>
             </div>
-            <button>Add Task</button>
-          </form>
+        </section>
+    </div>
+
+    <!-- Full page sections (To-Do / Daily Planner / Motivation / Pomodoro / Goals) -->
+    <section class="fullElem todo-list-fullpage">
+        <button class="back" id="0"><i class="ri-close-line"></i></button>
+        <h2>Your Personalised To-Do List</h2>
+        <div class="todo-container">
+            <div class="addTask">
+                <form>
+                    <input id="task-input" type="text" placeholder="Enter Task">
+                    <textarea placeholder="Enter Details" cols="30" row="10"></textarea>
+                    <div class="mark-imp">
+                        <input type="checkbox" id="check">
+                        <label for="check">Mark As Important!</label>
+                    </div>
+                    <button>Add Task</button>
+                </form>
+            </div>
+            <div class="allTask"></div>
         </div>
-        <div class="allTask"></div>
-      </div>
     </section>
 
     <section class="fullElem daily-planner-fullpage">
-      <button class="back" id="1"><i class="ri-close-line"></i></button>
-      <h2>Plan Your Day To Be More Productive</h2>
-      <div class="day-planner"></div>
+        <button class="back" id="1"><i class="ri-close-line"></i></button>
+        <h2>Plan Your Day To Be More Productive</h2>
+        <div class="day-planner"></div>
     </section>
 
     <section class="fullElem motivation-fullpage">
-      <button class="back" id="2"><i class="ri-close-line"></i></button>
-      <div class="motivation-container">
-        <div class="motivation-wrapper">
-          <div class="motivation-1"><h2>"Quote Of The Day"</h2></div>
-          <div class="motivation-2">
-            <h1>If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.</h1>
-          </div>
-          <div class="motivation-3"><h2>"Albert Einstein"</h2></div>
+        <button class="back" id="2"><i class="ri-close-line"></i></button>
+        <div class="motivation-fullpage-container">
+            <div class="motivation-container">
+                <div class="motivation-wrapper">
+                    <div class="motivation-1"><h2>"Quote Of The Day"</h2></div>
+                    <div class="motivation-2"><h1>If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.</h1></div>
+                    <div class="motivation-3"><h2>"Albert Einstein"</h2></div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <section class="fullElem pomodoro-fullpage">
-      <button class="back" id="3"><i class="ri-close-line"></i></button>
-      <h2>Study With Me!</h2>
-      <h4 class="session">Work Session</h4>
-      <div class="Pomo-timer">
-        <h1>25:00</h1>
-        <button class="start-timer">Start</button>
-        <button class="Pause-timer">Pause</button>
-        <button class="Reset-timer">Reset</button>
-      </div>
+        <button class="back" id="3"><i class="ri-close-line"></i></button>
+        <h2>Study With Me!</h2>
+        <h4 class="session">Work Session</h4>
+        <div class="Pomo-timer">
+            <h1>25:00</h1>
+            <button class="start-timer">Start</button>
+            <button class="Pause-timer">Pause</button>
+            <button class="Reset-timer">Reset</button>
+        </div>
     </section>
 
     <section class="fullElem goals-fullpage">
-      <button class="back" id="4"><i class="ri-close-line"></i></button>
-      <header>
-        <h1>😊 Daily Goals Tracker !!! 😊</h1>
-        <p>Stay motivated and track what matters today.</p>
-      </header>
-      <div class="goals-container">
-        <div class="goal-input">
-          <form>
-            <input id="goal-input" type="text" placeholder="Write your goal..." />
-            <input id="goal-deadline" type="date" />
-            <button>Add Goal</button>
-          </form>
+        <button class="back" id="4"><i class="ri-close-line"></i></button>
+        <header>
+            <h1>😊Daily Goals Tracker!!!😊</h1>
+            <p>Stay motivated and track what matters today.</p>
+        </header>
+        <div class="goals-container">
+            <div class="goal-input">
+                <form>
+                    <input id="goal-input" type="text" placeholder="Write your goal..." />
+                    <input id="goal-deadline" type="date" />
+                    <button>Add Goal</button>
+                </form>
+            </div>
+            <div class="goal-list"></div>
         </div>
-        <div class="goal-list"></div>
-      </div>
     </section>
-  </div>
 
-  <script src="responsive.js"></script>
+    <script src="responsive.js"></script>
 </body>
 </html>
