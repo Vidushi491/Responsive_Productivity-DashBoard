@@ -80,54 +80,97 @@ nav{
 /* Header - Weather & Date */
 .allElems header{
     width: 100%;
-    border-radius: 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1)), url(https://i.pinimg.com/1200x/65/16/9f/65169f2fc6f5ce2b6fbb09ee47a8413c.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 30px;
+    flex-wrap: wrap;
     gap: 20px;
-    box-shadow: 0 10px 30px var(--shadow);
+    background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
-/* Header left */
 .header1 h1{
     font-size: 36px;
     font-weight: 700;
+    color: var(--white);
     text-shadow: 0 2px 5px var(--shadow);
 }
 .header1 h2{
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 20px;
+    color: var(--white);
 }
 .header1 h4{
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 0.9;
+    font-size: 16px;
+    color: var(--white);
+    opacity: 0.8;
 }
 
-/* Header right (Weather) */
 .header2{
     min-width: 200px;
     background-color: var(--card-bg);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 5px 20px var(--shadow);
+    color: var(--white);
 }
-.header2 h2{
-    font-size: 32px;
-    font-weight: 700;
+.header2 h2{font-size: 32px;}
+.header2 h4{font-size: 18px;}
+.header2 h3{font-size: 14px; opacity: 0.85;}
+.homepage {
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+
+  /* Background Image */
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80") 
+              no-repeat center center/cover;
+  
+  /* Overlay effect */
+  position: relative;
 }
-.header2 h4{
-    font-size: 18px;
-    margin: 5px 0;
+
+.homepage::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  border-radius: 15px;
+  z-index: 1;
 }
-.header2 h3{
-    font-size: 14px;
-    opacity: 0.85;
+
+.dashboard-title,
+.date-time-weather {
+  position: relative;
+  z-index: 2; /* text overlay ke upar dikhe */
 }
+
+.dashboard-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.date-time-weather {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+  .date-time-weather {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* Feature cards */
 .allFeatures{
